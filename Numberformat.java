@@ -21,7 +21,7 @@ public class Numberformat
 	   try{
 	   double d=ob.nextDouble();
 	   Pattern pattern = Pattern.compile(".*\\D.*");
-	   if(pattern.matcher(String.valueOf(d)).matches())
+	   if(pattern.matcher(String.valueOf(d)).matches() && String.valueOf(d).indexOf(" ")!=-1)
 	  		 currencyFormat(new Double(d));
 	   else
 		   System.out.println("Enter a valid number");
